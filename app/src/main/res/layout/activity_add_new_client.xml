@@ -1,0 +1,207 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    tools:context="clienttaxi.clienttaxi.AddNewClientActivity">
+
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <fragment
+            android:id="@+id/addnewclientmap"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/innerNestedScrollView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addnewclientmap"
+            app:layout_constraintVertical_bias="0.2"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="0dp">
+
+
+            <LinearLayout
+                android:id="@+id/innerLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="333dp"
+                android:background="#363232"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/contactclient_form_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="16dp"
+                    android:text="@string/add_new_client"
+                    android:textColor="@color/bootstrap_brand_secondary_border"
+                    android:textSize="40sp"
+                    android:typeface="serif" />
+
+                <androidbootstrap.BootstrapAlert
+                    android:id="@+id/signupcleint_success_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+
+
+                    app:bootstrapBrand="success"
+                    app:dismissible="true"
+
+                    app:messageText="@string/signup_as_client_successfully"
+                    app:strongText="@string/thanks_for_registeration" />
+
+                <androidbootstrap.BootstrapAlert
+                    android:id="@+id/networkcleint_not_available_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:bootstrapBrand="danger"
+                    app:dismissible="true"
+                    app:messageText="@string/tryconnection_again"
+                    app:strongText="@string/network_not_available" />
+
+                <androidbootstrap.BootstrapAlert
+                    android:id="@+id/someclient_faild_empty_alert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    app:bootstrapBrand="danger"
+                    app:dismissible="true"
+
+                    app:messageText="بعرض الحقول فارغة الرجاء التاكد مجددا"
+                    app:strongText="تحقق من القيم!" />
+
+                <EditText
+                    android:id="@+id/enduser_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="الاسم"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/bootstrap_brand_secondary_border"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+
+                <EditText
+                    android:id="@+id/cleintlat"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="@string/officelatitude"
+                    android:inputType="text"
+                    android:textColor="@color/bootstrap_brand_secondary_border"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+
+                <EditText
+                    android:id="@+id/cleintlang"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="@string/officelongitude"
+                    android:inputType="text"
+                    android:textColor="@color/bootstrap_brand_secondary_border"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+
+                <EditText
+                    android:id="@+id/cleintuser_name"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="@string/office_username"
+                    android:inputType="text"
+                    android:textColor="@color/bootstrap_brand_secondary_fill"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+
+                <EditText
+                    android:id="@+id/cleintpass"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="@string/office_pass"
+                    android:inputType="textPassword"
+
+                    android:textColor="@color/bootstrap_brand_secondary_fill"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+
+                <EditText
+                    android:id="@+id/cleintphone"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:hint="ادخل رقم الهاتف"
+                    android:inputType="text"
+
+                    android:textColor="@color/bootstrap_brand_secondary_fill"
+                    android:textColorHint="@color/bootstrap_brand_secondary_border" />
+                <!-- <EditText
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:breakStrategy="balanced"
+                    android:fitsSystemWindows="true"
+                    android:gravity="top"
+                    android:hint="Your Message"
+                    android:inputType="textMultiLine"
+                    android:padding="5dp"
+                    android:singleLine="false" /> -->
+
+
+                <LinearLayout style="@style/progress_weight_container">
+
+                    <androidbootstrap.BootstrapProgressBar
+                        android:id="@+id/cleintexample_progress_default"
+                        style="@style/progress_example"
+
+                        app:animated="true"
+                        app:bootstrapBrand="warning"
+                        app:bootstrapMaxProgress="200"
+                        app:bootstrapProgress="0"
+                        app:striped="true" />
+                </LinearLayout>
+
+                <androidbootstrap.BootstrapButton
+                    android:id="@+id/cleintlogInBtndbtn"
+                    style="@style/wrapping_button"
+
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="3dp"
+                    android:background="@color/colorPrimary"
+                    android:onClick="add_me_as_cleint_office"
+                    android:text="@string/submit_new_office"
+                    app:bootstrapBrand="warning"
+                    app:roundedCorners="true" />
+
+            </LinearLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.constraint.ConstraintLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

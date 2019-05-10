@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="clienttaxi.clienttaxi.ShowAllTaxis_for_OfficeActivity"
+    tools:showIn="@layout/activity_show_all_taxis_for__office">
+    <androidbootstrap.BootstrapAlert
+        android:id="@+id/show_all_signup_success_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="success"
+        app:dismissible="true"
+        app:messageText="@string/all_taxis_fetched_success"
+        app:strongText=""
+        tools:ignore="MissingConstraints" />
+
+    <androidbootstrap.BootstrapAlert
+        android:id="@+id/show_all_network_not_available_alert"
+        android:layout_width="574dp"
+        android:layout_height="90dp"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="danger"
+        app:dismissible="true"
+        app:messageText="@string/tryconnection_again"
+        app:strongText="@string/network_not_available"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="14dp"
+        tools:layout_editor_absoluteY="16dp" />
+    <androidbootstrap.BootstrapAlert
+        android:id="@+id/show_all_some_faild_empty_alert"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="danger"
+        app:dismissible="true"
+        app:messageText="بعرض الحقول فارغة الرجاء التاكد مجددا"
+        app:strongText="تحقق من القيم!"
+        tools:ignore="MissingConstraints" />
+    <androidbootstrap.BootstrapAlert
+        android:id="@+id/notaxiforthisoffice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:bootstrapBrand="danger"
+        app:dismissible="true"
+        app:messageText="لم يتم اضافة اي تكسي الى هذا المكتب"
+        app:strongText="لا يوجد تكاسي"
+        tools:ignore="MissingConstraints" />
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/all_taxi_recycler_view"
+        android:layout_width="0dp"
+        android:layout_height="502dp"
+        android:layout_marginTop="104dp"
+        android:background="@color/bootstrap_gray_dark"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:scrollbars="vertical"
+
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/show_all_some_faild_empty_alert" />
+
+    <androidbootstrap.BootstrapProgressBar
+        android:id="@+id/show_all_taxis_progress_default"
+        style="@style/progress_example"
+        android:layout_height="59dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        app:animated="true"
+        app:bootstrapBrand="warning"
+        app:bootstrapMaxProgress="200"
+        app:bootstrapProgress="0"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/all_taxi_recycler_view"
+        app:striped="true"
+        tools:ignore="MissingConstraints" />
+
+</android.support.constraint.ConstraintLayout>

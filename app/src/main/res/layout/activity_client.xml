@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="clienttaxi.clienttaxi.ClientActivity">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/office_name"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/bootstrap_brand_secondary_fill"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:gravity="center"
+            android:text=""
+
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.958"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/innerNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addnewofficemap"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/innerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="333dp"
+            android:background="#2C2828"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/clientname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:textColor="@color/bootstrap_brand_secondary_border"
+                android:textSize="40sp"
+                android:typeface="serif"
+                />
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/add_new_client"
+                style="@style/wrapping_button"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:onClick="go_to_add_new_client_activty"
+                android:text="@string/login_as_client"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/order_taxi"
+                style="@style/wrapping_button"
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:onClick="show_all_officce"
+                android:text="اطلب تكسي من مكتب"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,68 @@
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="clienttaxi.clienttaxi.MapsActivity" >
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/innerNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addnewofficemap"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+    <LinearLayout
+        android:id="@+id/innerLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="970dp"
+        android:background="#464142"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical"
+        >
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:background="@color/common_google_signin_btn_text_dark_pressed"
+            android:text="اختر مكتب تكسي" />
+
+        <androidbootstrap.BootstrapButton
+            android:id="@+id/button2"
+            style="@style/wrapping_button"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_width="match_parent"
+            android:onClick="runClickHandler"
+            android:text="@string/referesh"
+            app:bootstrapBrand="warning"
+            android:background="@color/colorPrimary"
+            app:roundedCorners="true"
+            />
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:map="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="712dp" />
+
+
+
+
+        <TextView
+            android:id="@+id/output"
+            android:layout_width="364dp"
+            android:layout_height="142dp"
+            android:visibility="invisible"
+            android:text="TextView" />
+    </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+</android.support.design.widget.CoordinatorLayout>

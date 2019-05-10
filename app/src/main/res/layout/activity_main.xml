@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="clienttaxi.MainActivity">
+
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/innerNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addnewofficemap"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/innerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#2C2828"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+
+
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/show_client_app"
+                style="@style/wrapping_button"
+                android:onClick="show_client_apponlcick"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:text="@string/show_client_app"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+
+
+
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>

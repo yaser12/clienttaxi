@@ -1,0 +1,67 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">تطبيق مكتب التكاسي</string>
+    <string name="title_activity_maps">Map1</string>
+    <string name="title_activity_real_location" tools:ignore="ExtraTranslation">Real Location</string>
+
+    <string name="latitude_label">Latitude</string>
+    <string name="longitude_label">Longitude</string>
+    <string name="last_update_time_label">Last location update time</string>
+
+    <string name="start_updates">Start updates</string>
+    <string name="stop_updates">Stop updates</string>
+
+    <string name="location_settings_inadequate_warning">The location settings on the device are not
+        adequate to run this sample. Fix in Settings.</string>
+
+    <string name="permission_rationale">Location permission is needed for core functionality</string>
+    <string name="permission_denied_explanation">Permission was denied, but is needed for core
+        functionality.</string>
+    <string name="settings">Settings</string>
+    <string name="show_taxi_office">مشاهدة جميع المكاتب على الخريطة</string>
+    <string name="add_new_taxi_office">تسجيل مكتب تكسي جديد</string>
+    <string name="register_new_taxi">تسجيل  تكسي جديد</string>
+    <string name="office_username">أدخل اسم المستخدم</string>
+    <string name="officelongitude">قيمة خط الطول</string>
+    <string name="officelatitude">قيمة خط العرض</string>
+    <string name="office_name">اسم المكتب</string>
+    <string name="office_pass">أكتب كلمة السر</string>
+    <string name="submit_new_office">تسجيل جديد</string>
+    <string name="referesh">تحديث</string>
+    <string name="tryconnection_again">اختبر الاتصال بالانترت وعاود المحاولة لاحقا.</string>
+    <string name="network_not_available">الشبكة غير متوفرة!</string>
+    <string name="signup_success">تم تسجيلك كمتب تكاسي جديد بنجاح</string>
+    <string name="thanks_for_registeration">شكرا لتسجيلك</string>
+    <string name="your_number_is">رقم هذا التكسي هو :</string>
+    <string name="youroffinenumber_is">رقم  مكتبك هو :</string>
+    <string name="title_activity_add_new_taxi">AddNewTaxiActivity</string>
+    <string name="add_new_taxi">اضافة تكسي جديد</string>
+    <string name="enter_driver_name">ادخل اسم السائق</string>
+    <string name="add_taxi_btn_caption">اضف تكسي</string>
+    <string name="enter_desp_of_taxi">اكتب شرح عن التكسي</string>
+    <string name="title_activity_show_all_taxis_for__office">ShowAllTaxis_for_OfficeActivity   </string>
+    <string name="delete_taxi">حذف التكسي</string>
+    <string name="show_all_taxi_for_office_id">مشاهدة جميع التكاسي لهذا المكتب</string>
+    <string name="all_taxis_fetched_success">تم جلب المعلومات بنجاح</string>
+    <string name="taxisignup_success">تم اضافة تكسي جديد بنجاح</string>
+    <string name="added_taxi_success">تمت الاضافة بنجاح</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_client">ClientActivity</string>
+    <string name="show_taxi_app">مشاهدة تطبيق التكسي</string>
+    <string name="show_office_app">فتح تطبيق المكاتب</string>
+    <string name="show_client_app">فتح تطبيق الزبائن</string>
+    <string name="add_new_order">اضافة طلب تكسي</string>
+    <string name="login_as_client">تسجيل كزبون جديد</string>
+    <string name="show_all_office_to_oreder_taxi">مشاهدة جميع المكاتب لطلب تكسي منها</string>
+    <string name="add_new_office">تسجيل مكتب تكسي جديد</string>
+    <string name="title_activity_add_new_client">AddNewClientActivity</string>
+    <string name="add_new_client">تسجيل زبون جديد</string>
+    <string name="signup_as_client_successfully">تم تسجيلك كزبون بنجاح</string>
+    <string name="title_activity_select_offieces">SelectOffiecesActivity</string>
+    <string name="title_activity_select_one_taxi_from_office">SelectOneTaxiFromOfficeActivity
+    </string>
+    <string name="call_this_taxi">اطلب هذه التكسي</string>
+    <string name="selecttaxi">اختر تكسي</string>
+    <string name="title_activity_calling_taxi">CallingTaxiActivity</string>
+    <string name="yourclientnumber">رقم كزبون هو :</string>
+
+</resources>

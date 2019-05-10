@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:background="@color/bootstrap_gray_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="56dp"
+        android:paddingLeft="24dp"
+        android:paddingRight="24dp">
+        <androidbootstrap.BootstrapAlert
+            android:id="@+id/add_taxi_signup_success_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:bootstrapBrand="success"
+            app:dismissible="true"
+            android:visibility="invisible"
+            app:messageText="@string/taxisignup_success"
+            app:strongText="@string/added_taxi_success"
+            />
+        <androidbootstrap.BootstrapAlert
+            android:id="@+id/add_taxi_network_not_available_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:bootstrapBrand="danger"
+            app:dismissible="true"
+            android:visibility="invisible"
+            app:messageText="@string/tryconnection_again"
+            app:strongText="@string/network_not_available"
+            />
+        <androidbootstrap.BootstrapAlert
+            android:id="@+id/add_taxi_some_faild_empty_alert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:visibility="invisible"
+            app:bootstrapBrand="danger"
+            app:dismissible="true"
+
+            app:messageText="بعرض الحقول فارغة الرجاء التاكد مجددا"
+            app:strongText="تحقق من القيم!"
+            />
+
+        <TextView
+            android:id="@+id/add_taxi_result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="16dp"
+            android:text="@string/register_new_taxi"
+            android:textColor="@color/bootstrap_brand_warning"
+            android:textSize="40sp"
+            android:typeface="serif" />
+        <!--  Email Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_driver"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:hint="@string/enter_driver_name" />
+        </android.support.design.widget.TextInputLayout>
+
+        <!--  Password Label -->
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#FFFFFF"
+            android:textColor="#FFFFFF"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText android:id="@+id/input_decription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="#FFFFFF"
+                android:textColor="#FFFFFF"
+                android:inputType="text"
+                android:hint="@string/enter_desp_of_taxi"/>
+        </android.support.design.widget.TextInputLayout>
+        <androidbootstrap.BootstrapButton
+            android:id="@+id/button3"
+            style="@style/wrapping_button"
+            android:layout_marginTop="6dp"
+            android:layout_width="match_parent"
+            android:onClick="add_new_taxi_info_to_my_officebtn"
+            android:text="@string/add_taxi_btn_caption"
+            app:bootstrapBrand="warning"
+            android:background="@color/colorPrimary"
+
+            android:layout_marginBottom="7dp"
+            app:roundedCorners="true"
+            />
+
+
+        <androidbootstrap.BootstrapProgressBar
+            android:id="@+id/add_taxi_progress_default"
+            style="@style/progress_example"
+
+            android:layout_width="wrap_content"
+            app:animated="true"
+            app:bootstrapBrand="warning"
+            app:bootstrapMaxProgress="200"
+            app:bootstrapProgress="0"
+            app:striped="true" />
+
+
+    </LinearLayout>
+</ScrollView>

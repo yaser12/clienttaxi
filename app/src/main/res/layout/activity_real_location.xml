@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+     Copyright (C) 2017 Google, Inc.
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+
+
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="clienttaxi.RealLocationActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <TextView
+            android:id="@+id/office_name"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:layout_marginStart="8dp"
+            android:textColor="@color/bootstrap_brand_secondary_fill"
+            android:layout_marginLeft="8dp"
+            android:layout_marginEnd="52dp"
+            android:layout_marginRight="52dp"
+            android:gravity="center"
+            android:text=""
+
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.958"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="0dp" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/innerNestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addnewofficemap"
+        app:layout_constraintVertical_bias="1.0"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <LinearLayout
+            android:id="@+id/innerLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="333dp"
+            android:background="#2C2828"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/add_new_officer"
+                style="@style/wrapping_button"
+                android:layout_marginTop="6dp"
+                android:layout_width="match_parent"
+                android:onClick="go_to_add_new_office_activty"
+                android:text="@string/add_new_taxi_office"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/map_btn"
+                style="@style/wrapping_button"
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:text="@string/show_taxi_office"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/add_new_taxi_to_office"
+                style="@style/wrapping_button"
+                android:onClick="add_new_taxi_to_my_office"
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:text="@string/add_new_taxi"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+            <androidbootstrap.BootstrapButton
+                android:id="@+id/show_all_taxi_for_office_idbtn"
+                style="@style/wrapping_button"
+
+                android:layout_width="match_parent"
+                android:layout_marginTop="6dp"
+                android:onClick="show_all_taxi_for_office_idClick"
+                android:text="@string/show_all_taxi_for_office_id"
+                app:bootstrapBrand="warning"
+                android:background="@color/colorPrimary"
+                app:roundedCorners="true"
+                />
+
+
+
+
+            <Button
+                android:id="@+id/stop_updates_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="3dp"
+                android:enabled="false"
+                android:gravity="center"
+                android:onClick="stopUpdatesButtonHandler"
+                android:text="@string/stop_updates"
+                android:visibility="invisible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/start_updates_button" />
+
+
+            <Button
+                android:id="@+id/start_updates_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:onClick="startUpdatesButtonHandler"
+                android:text="@string/start_updates"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/add_new_taxi_to_office" />
+
+            <TextView
+                android:id="@+id/latitude_text"
+                android:layout_width="wrap_content"
+                android:layout_height="18dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginRight="32dp"
+                android:text="lattitude"
+                android:textSize="@dimen/default_text_size"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/last_update_time_text" />
+
+            <TextView
+                android:id="@+id/longitude_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="184dp"
+                android:layout_marginEnd="228dp"
+                android:layout_marginRight="228dp"
+                android:text="longitude"
+                android:textSize="@dimen/default_text_size"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stop_updates_button" />
+
+            <TextView
+                android:id="@+id/last_update_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="116dp"
+                android:layout_marginRight="116dp"
+                android:text="last updat time"
+                android:textSize="@dimen/default_text_size"
+                android:visibility="invisible"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/stop_updates_button" />
+
+            <TextView
+                android:id="@+id/location_inadequate_warning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/location_settings_inadequate_warning"
+                android:visibility="invisible"
+                app:layout_constraintTop_toBottomOf="@+id/latitude_text"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="0dp" />
+
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.design.widget.CoordinatorLayout>
